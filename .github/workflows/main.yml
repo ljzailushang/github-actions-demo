@@ -10,11 +10,16 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@master
-
+      
+    - name: Install and Build # 下载依赖 打包项目
+      run: |
+        npm install
+        npm run build
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@master
       env:
         ACCESS_TOKEN: ${{ secrets.ACTION_TOKEN }}
         BRANCH: gh-pages
         FOLDER: build
-        BUILD_SCRIPT: npm install && npm run build
+        BUILD_SCRIPT: npm install && npm fond && npm run build
+        REPOSITORY_NAME: https://ljzailushang.github.io/
