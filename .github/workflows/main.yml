@@ -22,4 +22,4 @@ jobs:
         BRANCH: gh-pages
         FOLDER: build
         BUILD_SCRIPT: npm install && npm fond && npm run build
-        REPOSITORY_NAME: https://ljzailushang.github.io/
+        REPOSITORY_NAME: https://ljzailushang.github.io/gh-pages
